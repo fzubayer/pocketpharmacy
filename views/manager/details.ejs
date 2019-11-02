@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>manager details</title>
+</head>
+
+<body>
+    <h1>Manager Details</h1>
+    <a href="/manager">Back</a> |
+    <a href="/logout">logout</a>
+
+    <table border="1">
+        <tr>
+            <td>Username</td>
+            <td>
+                <%= username %>
+            </td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td>
+                <%= password %>
+            </td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>
+                <%= email %>
+            </td>
+        </tr>
+        <tr>
+            <td>phone</td>
+            <td>
+                <%= phone %>
+            </td>
+        </tr>
+        <tr>
+            <td>address</td>
+            <td>
+                <%= address %>
+            </td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>
+                <%= type %>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="../edit/<%= email %>">Edit Profile</a></td>
+
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>

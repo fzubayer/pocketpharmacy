@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home page</title>
+</head>
+
+<body>
+    <h1>User List</h1>
+    <a href="/admin">Back</a> |
+    <a href="/logout">logout</a>
+
+    <table border="1">
+        <tr>
+
+            <td>USERNAME</td>
+            <td>PASSWORD</td>
+            <td>EMAIL</td>
+            <td>PHONE</td>
+            <td>ADDRESS</td>
+            <td>TYPE</td>
+            <td>ACTION</td>
+        </tr>
+
+
+        <% console.log("user count:" +user.length);%>
+            <% for(var i=0; i < user.length; i++){ %>
+
+                <tr>
+
+                    <td>
+                        <%= user[i].username %>
+                    </td>
+                    <td>
+                        <%= user[i].password %>
+                    </td>
+                    <td>
+                        <%= user[i].email %>
+                    </td>
+                    <td>
+                        <%= user[i].phone %>
+                    </td>
+                    <td>
+                        <%= user[i].address %>
+                    </td>
+                    <td>
+                        <%= user[i].type %>
+                    </td>
+                    <!-- <td>
+                        <a href="/admin/edit/<%= user[i].email %>">Edit</a> |
+                        <a href="/admin/delete/<%= user[i].email %>">Delete</a> |
+                        <a href="/admin/details/<%= user[i].email %>">Details</a>
+                    </td> -->
+
+
+
+
+
+
+
+                </tr>
+                <% } %>
+
+
+    </table>
+
+
+
+
+</body>
+
+</html>

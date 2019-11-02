@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign up page</title>
+</head>
+
+<body>
+    <h1>SIGN UP</h1>
+    <a href="/login">Back</a> |
+    <a href="/logout">logout</a>
+
+    <form method="post">
+        <table border="1">
+            <tr>
+                <td>USERNAME</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>PASSWORD</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="tel" name="phone"></td>
+            </tr>
+            <tr>
+
+                <td>Address</td>
+
+                <td><input type="text" name="address"></td>
+            </tr>
+
+            <tr>
+                <td>Type:</td>
+                <td>
+                    <p>Please select your User TYPE:</p>
+                    <input type="radio" name="type" value="customer">customer<br>
+                    <input type="radio" name="type" value="admin"> admin<br>
+                    <input type="radio" name="type" value="manager"> manager<br>
+                    <input type="radio" name="type" value="doctor"> doctor<br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" name="submit" value="Save"></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

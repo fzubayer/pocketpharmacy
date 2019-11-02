@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>customer details</title>
+</head>
+
+<body>
+    <h1>Customer Details</h1>
+    <a href="/customer">Back</a> |
+    <a href="/logout">logout</a>
+
+    <table border="10">
+        <tr>
+            <td>USERNAME</td>
+            <td>
+                <%= username %>
+            </td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td>
+                <%= password %>
+            </td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>
+                <%= email %>
+            </td>
+        </tr>
+        <tr>
+            <td>phone</td>
+            <td>
+                <%= phone %>
+            </td>
+        </tr>
+        <tr>
+            <td>address</td>
+            <td>
+                <%= address %>
+            </td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>
+                <%= type %>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="../edit/<%= email %>">EDIT profile</a></td>
+            <td>
+                <a href="">Delete rfg.</a>
+            </td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>
