@@ -62,4 +62,31 @@ module.exports = {
     //         callback(status);
     //     });
     // }
+
+    /*getByProductid: function(productid, callback) {
+
+        var sql = "select * from inventory where productid=?";
+        db.getResults(sql, [productid], function(result) {
+            if (result.length > 0) {
+                callback(result[0]);
+            } else {
+                callback([]);
+            }
+        });
+    },*/
+
+    getAll: function(callback) {
+        var sql = "select * from inventory";
+
+        db.getResults(sql, [], function(results) {
+
+            if (results.length > 0) {
+                console.log('list pise');
+                callback(results);
+            } else {
+                console.log('list pise nai');
+                callback([]);
+            }
+        });
+    },
 }

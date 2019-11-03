@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home page</title>
+</head>
+
+<body>
+    <h1>Products</h1>
+    <a href="/manager">Back</a> |
+    <a href="/logout">logout</a>
+
+    <table border="1">
+        <tr>
+
+            <td>Product ID</td>
+            <td>Product Name</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Image</td>
+            <td>ACTION</td>
+        </tr>
+
+
+        <% console.log("inventory count:" +inventory.length);%>
+            <% for(var i=0; i < inventory.length; i++){ %>
+
+                <tr>
+
+                    <td>
+                        <%= inventory[i].productid %>
+                    </td>
+                    <td>
+                        <%= inventory[i].productname %>
+                    </td>
+                    <td>
+                        <%= inventory[i].price %>
+                    </td>
+                    <td>
+                        <%= inventory[i].quantity %>
+                    </td>
+                    <td>
+                        <%= inventory[i].image %>
+                    </td>
+
+                    <td>
+                        <a href="/manager/edit/<%= inventory[i].productid%>">Edit</a> |
+                        <a href="/manager/delete/<%= user[i].productname %>">Delete</a> |
+
+                    </td>
+
+
+                </tr>
+                <% } %>
+
+
+    </table>
+
+
+
+
+</body>
+
+</html>

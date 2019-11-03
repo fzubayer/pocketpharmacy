@@ -74,5 +74,46 @@ router.get('/userList', function(request, response) {
     });
 });
 
+router.post('/edit/:email', function(request, response) {
+    console.log("edit post");
+    var user = {
+        username: request.body.username,
+        password: request.body.password,
+        email: request.params.email,
+        phone: request.body.phone,
+        address: request.body.address,
+
+    };
+
+    userModel.update(user, function(status) {
+
+        if (status) {
+            response.redirect('../details/' + request.params.email);
+        } else {
+            response.redirect('/manager/edit/' + request.params.email);
+        }
+    });
+
+});
+
+
+router.get('/userList', function(request, response) {
+    console.log("userlist get");
+
+    userModel.getAll(function(result) {
+        console.log("userlist get all");
+        response.render('manager/userlist', { user: result });
+    });
+});
+
+router.get('/inventory', function(request, response) {
+    console.log("manager");
+    response.render('manager/inventory');
+});
+
+router.get('/salary', function(request, response) {
+    console.log("manager");
+    response.render('manager/salary');
+});
 
 module.exports = router;
