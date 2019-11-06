@@ -16,7 +16,7 @@ module.exports = {
             }
         });
     },
-    getByEmail: function(productid, callback) {
+    getById: function(productid, callback) {
 
         var sql = "select * from inventory where productid=?";
         db.getResults(sql, [productid], function(result) {

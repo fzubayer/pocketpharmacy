@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
+    <title>customer</title>
 </head>
 <fieldset>
     <p>HI ,
@@ -23,7 +23,53 @@
     <a href="../customer/uploadprescription/<%= email %>">uploadprescripsion</a></br>
 
     <a href="../customer/doctorlist/<%= email %>">
-    doctorlist</a></br>
+        <a href="../cart">Cart</a></br>
+
+        <table border="1">
+            <tr>
+                <td>Picture</td>
+
+                <td>Product Name</td>
+
+                <td>Price</td>
+                <td>Add TO Cart</td>
+
+            </tr>
+
+
+            <% console.log("product count:" +product.length);%>
+                <% for(var i=0; i < product.length; i++){ %>
+
+                    <tr>
+                        <td>
+                            <p>Pic</p>
+                        </td>
+
+                        <td>
+                            <%= product[i].productname %>
+                        </td>
+                        <td>
+                            <%= product[i].price %>
+                        </td>
+
+
+                        <td>
+                            <form method="post" action="/cart/<%= product[i].productid %>">
+                                <input type="submit" value="Add to Cart">
+                                <input type="hidden" value="{_csrf}" name="_csrf">
+
+                            </form>
+                        </td>
+
+
+                    </tr>
+                    <% } %>
+
+
+        </table>
+
+
+
 
 
 

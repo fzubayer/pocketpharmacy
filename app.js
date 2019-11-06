@@ -13,6 +13,7 @@ var admin = require('./controllers/admin');
 var customer = require('./controllers/customer');
 var manager = require('./controllers/manager');
 var doctor = require('./controllers/doctor');
+var cart = require('./controllers/cart');
 var app = express();
 
 
@@ -30,7 +31,7 @@ app.use('/login', login);
 app.use('/signup', signup);
 app.use('/logout', logout);
 app.use('/admin', admin);
-
+app.use('/cart', cart);
 app.use('/customer', customer);
 app.use('/manager', manager);
 app.use('/doctor', doctor);
